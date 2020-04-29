@@ -207,8 +207,8 @@ window.onload = () => {
 
 const
     config = {
-        width: 10,
-        height: 5,
+        width: 25,
+        height: 12,
         cellwidth: 50,
         bombPadding: 5,
         flagPadding: 5
