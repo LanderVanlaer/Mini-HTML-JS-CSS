@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#">Button</a>
+    <a href="#">Button</a>
+    <script>
+        //Selecting all a-elements
+        const links = document.querySelectorAll("a");
+
+        //Looping through array of DOM-elements
+        links.forEach(a => {
+            //Add click event listener to each a-element
+            a.addEventListener('click', function(e) {
+                //Create span-element
+                const span = document.createElement('span');
+                //mouse absolute position - a-element absolute position
+                span.style.left = `${e.clientX - this.offsetLeft}px`;
+                span.style.top = `${e.clientY - this.offsetTop}px`;
+
+                //Append span to a
+                this.appendChild(span);
+
+                //Remove span after 1s (when animation ends)
+                setTimeout(() => {
+                    span.remove();
+                }, 1000);
+            })
+        })
+    </script>
+</body>
+
+</html>
