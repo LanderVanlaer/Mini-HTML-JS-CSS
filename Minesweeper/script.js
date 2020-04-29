@@ -226,4 +226,6 @@ let
     gameOver = false;
 
 //HIHI FUNNNNN
-console.error(`${i} Uncaught ReferenceError: Your Brain is undefined`);
+for (let i = 0; i < 50; i++) {
+    console.error(`${i} Uncaught ReferenceError: Your Brain is undefined`);
+}
